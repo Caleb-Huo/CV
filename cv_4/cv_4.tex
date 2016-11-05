@@ -1,0 +1,358 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage{color,hyperref}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{Page \thepage \hspace{1pt} of \pageref{LastPage}}
+
+
+\name{Zhiguang (Caleb) Huo} % Your name
+\address{(412)-979-0592 \\ zhh18@pitt.edu} % Your phone number and email
+\address{\url{http://www.pitt.edu/~zhh18/dev/}} % Your phone number and email
+\address{4600 Bayard ST, APT 308, Pittsburgh, PA 15213} % Your address
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+\href{http://www.pitt.edu}{\textbf{University of Pittsburgh}}, \hfill{Pittsburgh, PA, US}
+\begin{itemize}[noitemsep,topsep=0pt]
+\item Ph.D. in
+        \href{http://www.publichealth.pitt.edu/biostatistics}
+             {Biostatistics},
+             \emph{Expected:} \hfill{\em Summer 2017}
+	\begin{itemize}
+        \item Dissertation:  \emph{Statistical integrative omics methods for disease subtype discovery \\
+        and  single cell methylation methods}
+        \item GPA: \emph{3.93/4.00}
+        \item Advisors:
+              \href{http://www.pitt.edu/~ctseng/}
+                   {George C. Tseng, ScD} and
+              \href{http://www.publichealth.pitt.edu/home/directory/yong-seok-park/}
+                   {Yong Seok Park, PhD}
+	\end{itemize}
+	\item M.S. in
+        \href{http://www.physicsandastronomy.pitt.edu}
+             {Physics}, \hfill {\em Apr 2012}              
+	\begin{itemize}
+	\item {\emph{GPA: 3.86/4.00}}
+	\end{itemize}
+\end{itemize}
+
+\href{http://www.hit.edu.cn} {\textbf{Harbin Institute of Technology}},
+\hfill{Harbin, Heilongjiang, China}
+\begin{itemize}[noitemsep,topsep=0pt]
+\item B.S. in
+        \href{http://physics.hit.edu.cn/}
+             {Physics}, \hfill {\em June 2011} 
+        \begin{itemize}
+        \item GPA: \emph{90.43/100}
+        \end{itemize}
+
+\end{itemize}
+\end{rSection}
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Research Interest}
+My research interest lies in both statistical methodology and application on genomics and bioinformatics.
+I am particular interested in genomics data meta-analysis and integration, 
+high-dimensional data analysis, graphical model and Bayesian approach, 
+optimization and statistical computing, as well as software development.
+I have collaborated with biologists (cancer/psychiatry) on a broad range of genomics data,
+which motivates me to develop data-driven efficient methodology and user-friendly software. 
+\end{rSection}
+
+%------------------------------------------------
+\begin{rSection}{Publications}
+\textbf{Methydology}
+\begin{enumerate}[noitemsep,topsep=0pt]
+\item  {\bf Zhiguang Huo}, Ying Ding, Silvia Liu, Steffi Oesterreich, and George Tseng. Meta-Analytic Framework for Sparse K-Means to Identify Disease Subtypes in Multiple Transcriptomic Studies. \emph{Journal of the American Statistical Association},  111, no. 513 (2016): 27-42.
+    \item {\bf Zhiguang Huo}, Chi Song, George C. Tseng. (2016)
+Bayesian latent hierarchical model for transcriptomic meta-analysis to detect biomarkers with clustered meta-patterns of differential expression signals. Submitted to \emph{Annals of Applied Statistics} (under second round of review).
+    \item {\bf Zhiguang Huo}, George C. Tseng. (2016)
+Integrative Sparse $K$-means for disease subtype discovery using multi-level omics data.
+Submitted to \emph{Annals of Applied Statistics} (under second round of review).
+\item Li Zhu, Ying Ding, Cho-Yi Chen, Lin Wang, {\bf Zhiguang Huo}, SungHwan Kim, Christos Sotiriou, Steffi Oesterreich and George C. Tseng. (2016)
+MetaDCN: meta-analysis framework for differential coexpression network detection with an application in breast cancer.
+\emph{Bioinformatics} (accepted).
+\item SungHwan Kim, Dongwan Kang, {\bf Zhiguang Huo}, Yongseok
+Park, George C. Tseng. (2016)
+Meta-analytic principal component analysis.
+Submitted to \emph{Annals of Applied Statistics} (under revision).
+    \item Silvia Liu, Wei-Hsiang Tsai, Ying Ding, Rui Chen, Zhou Fang, {\bf Zhiguang Huo}, SungHwan Kim, Tianzhou Ma, Ting-Yu Chang, Nolan Michael Priedigkeit, Adrian V. Lee, Jianhua Luo, Hsei-Wei Wang, I-Fang Chung, George C. Tseng. (2015).
+Comprehensive evaluation of fusion transcript detection algorithms and a meta-caller to combine top performing methods in paired-end RNA-seq data.
+\emph{Nucleic Acids Research}, 10.1093/nar/gkv1234.
+    \item Xingbin Wang, Dongwan Kang, Kui Shen, Chi Song, Shuya Lu, Lunching Chang, Serena G. Liao, {\bf Zhiguang Huo}, Naftali Kaminski, Etienne Sibille, Yan Lin, Jia Li and George C. Tseng. (2012) A Suite of R Packages for Quality Control, Differentially Expressed Gene and Enriched Pathway Detection in Microarray Meta-analysis. \emph{Bioinformatics}, 28:2534-2536.
+\end{enumerate}
+
+\textbf{Application}
+\begin{enumerate}[noitemsep,topsep=0pt,resume]
+    \item  Dominique Arion, {\bf Zhiguang Huo}, John F. Enwright, John P. Corradi, George Tseng and David A. Lewis.
+Transcriptome alterations in prefrontal pyramidal neurons distinguish schizophrenia from bipolar and major depressive disorders.
+Submitted to \emph{Biological Psychiatry}, (under second round of review).
+
+    \item Tiffany A. Katz, Serena G. Liao, Vincent J. Palmieri, Robert K. Dearth, Thushangi Pathiraja, {\bf Zhiguang Huo}, Patricia Shaw, Sarah Small, Nancy E. Davidson, David G. Peters, George C. Tseng, Steffi Oesterreich, Adrian V. Lee. (2015) Targeted DNA methylation screen in the mouse mammary genome reveals a parity-induced hypermethylation of igf1r which persists long after parturition. \emph{Cancer Prevention Research}, pages canprevres-0178.
+
+    \item Yan P. Yu, Silvia Liu, {\bf Zhiguang Huo}, Amantha Martin, Joel B. Nelson, George C. Tseng and Jian-Hua Luo. (2015) Genomic copy number variations in the genomes of leukocytes predict prostate cancer clinical outcomes. \emph{PloS one}, 10(8):e0135982.
+
+\end{enumerate}
+
+\textbf{Manuscript in preparation}
+\begin{itemize}
+\item \textbf{Methydology}
+\end{itemize}
+
+\begin{enumerate}[noitemsep,topsep=0pt,resume]
+\item  {\bf Zhiguang Huo}, Shaowu Tang, YongSeok Park and George Tseng. 
+Biomarker categorization and fast computing of adaptively weighted Fisher's method for meta-analysis in omics applications.
+\item Li Zhu, {\bf Zhiguang Huo}, Tianzhou Ma, George Tseng. 
+Bayesian indicator variable selection model with multi-layer overlapping groups.
+\item Tianzhou Ma, {\bf Zhiguang Huo}, $\ldots$, George Tseng.  
+MetaOmics - a Comprehensive Software Suite with Interactive Visualization for Transcriptomic Meta-Analysis.
+\item AW theory
+\end{enumerate}
+
+\begin{itemize}
+\item \textbf{Application}
+\end{itemize}
+
+\begin{enumerate}[noitemsep,topsep=0pt,resume]
+\item Enwright, John, Dominique Arion, John Corradi, Aiqing He, {\bf Zhiguang Huo}, George Tseng, and David Lewis. Transcriptome Profiling of Layer 3 Parvalbumin Neurons from the Dorsolateral Prefrontal Cortex of Schizophrenia Subjects.
+\item RNAseq96 from Marianne.
+\item iPSC Ryan.
+\end{enumerate}
+
+
+
+
+\textbf{Book and Book Chapter}
+\begin{enumerate}[noitemsep,topsep=0pt,resume]
+\item  George C. Tseng, {\bf Zhiguang Huo} and Tianzhou Ma.
+Foundations for High-Throughput Omics Data Analysis: Methods, Theories and Applications. Chapman \& Hall/CRC. 
+
+\item  {\bf Zhiguang Huo}, Shaowu Tang, YongSeok Park and George Tseng.  (2015) MetaOmics: transcriptomic meta-analysis methods for biomarker detection, pathway analysis and other exploratory purposes. Book chapter in Integrating omics data: statistical and computational methods.
+\end{enumerate}
+\end{rSection}
+
+\begin{rSection}{Award}
+\textbf{Student Awards}
+\begin{itemize}[noitemsep,topsep=0pt]
+\item American Statistics Association (ASA) Pittsburgh chapter  \hfill March 2016
+\begin{itemize}[noitemsep,topsep=0pt]
+\item Student of the year
+\end{itemize}
+\item Department of Physics, Harbin Institute of Technology \hfill May 2009
+\begin{itemize}[noitemsep,topsep=0pt]
+\item National Scholarship of P.R. China. \\(Awarded to the top 2 students in my Bachelors degree.)
+\end{itemize}
+\end{itemize}
+
+
+\textbf{Travel Awards} 
+\begin{itemize}[noitemsep,topsep=0pt]
+\item SAMSI Research Triangle Park, NC.	
+\begin{itemize}[noitemsep,topsep=0pt]
+\item {Optimization Summer School} \hfill Aug 2016
+\item {Epigenetics Workshop} \hfill Mar 2015
+\item {Beyond Bioinformatics Workshop} \hfill June 2014
+\end{itemize}
+
+\end{itemize}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Teaching Experience (University of Pittsburgh)}
+\textbf{Lecture}
+\begin{itemize}[noitemsep,topsep=0pt]
+\item BIOST2094 - Advanced R Computing (upcoming) \hfill Jan 2017
+\begin{itemize}[noitemsep,topsep=0pt]
+\item{6 lectures on Advanced R Computation}
+\end{itemize}
+\item BIOST2025 - Special Studies in Bayesian Data Analysis \hfill Oct 2016
+\begin{itemize}[noitemsep,topsep=0pt]
+\item{4 lectures on Advanced Bayesian Computation}
+\end{itemize}
+\end{itemize}
+
+
+\textbf{Guest lecture}
+\begin{itemize}[noitemsep,topsep=0pt]
+\item BIOST2055 - Introductory high-throughput genomic data analysis I: \\data mining and applications \hfill Mar 2016
+\begin{itemize}[noitemsep,topsep=0pt]
+\item{Differential and isoform analysis of RNA-seq data}
+\end{itemize}
+\item BIOST2078 - Introductory high-throughput genomic data analysis II: \\theories and algorithms  \hfill Dec 2015
+\begin{itemize}[noitemsep,topsep=0pt]
+\item{Reproducible research and parallel computing in R}
+\end{itemize}
+\item BIOST2078 - Introductory high-throughput genomic data analysis II: \\theories and algorithms  \hfill Dec 2014
+\begin{itemize}[noitemsep,topsep=0pt]
+\item{Reproducible research}
+\end{itemize}
+\end{itemize}
+
+\textbf{Teaching assistant}
+\begin{itemize}[noitemsep,topsep=0pt]
+\item BIOST 2078 - Introductory high-throughput genomic data analysis II: \\theories and algorithms \hfill {Sep 2014 - Dec 2014}
+\item PHYS 0212 - Introduction to Laboratory Physics \hfill {Jan 2012 - Apr 2012}
+\item PHYS 0212 - Introduction to Laboratory Physics \hfill {Aug 2011 - Dec 2011}
+\end{itemize}
+
+\end{rSection}
+
+\begin{rSection}{Presentations}
+\textbf{Poster and oral presentation}
+
+\begin{itemize}[noitemsep,topsep=0pt]
+\item Poster, SAMSI optimization summer school,  Research Triangle Park, NC  \hfill {Aug 2016}
+\begin{itemize}[noitemsep,topsep=0pt]
+\item{Integrative Sparse $K$-means for disease subtype discovery using \\multi-level omics data.}
+\end{itemize}
+
+\item Poster, Pittsburgh ASA banquet, Pittsburgh, PA \hfill {Mar 2016}
+\begin{itemize}[noitemsep,topsep=0pt]
+\item{Integrative Sparse $K$-means for disease subtype discovery using \\multi-level omics data.}
+\end{itemize}
+
+\item Oral Presentation, JSM, Seattle, WA \hfill {Aug 2015}
+\begin{itemize}[noitemsep,topsep=0pt]
+\item{Meta-analytic framework for sparse K-means to identify disease\\ subtypes in multiple transcriptomic studies.}
+\end{itemize}
+
+\item Poster, Pittsburgh ASA banquet, Pittsburgh, PA \hfill {Apr 2015}
+\begin{itemize}[noitemsep,topsep=0pt]
+\item{Meta-analytic framework for sparse K-means to identify disease\\ subtypes in multiple transcriptomic studies.}
+\end{itemize}
+
+\item Oral Presentation, ENAR Conference, Miami, FL \hfill {Mar 2015}
+\begin{itemize}[noitemsep,topsep=0pt]
+\item{Meta-analytic framework for sparse K-means to identify disease\\ subtypes in multiple transcriptomic studies.}
+\end{itemize}
+
+\item Poster, Dean's Day's competition, GSPH, University of Pittsburgh \hfill {Mar 2015}
+\begin{itemize}[noitemsep,topsep=0pt]
+\item{Discover and Characterize Invasive Lobular Breast Carcinoma Subtypes.}
+\end{itemize}
+
+\item Oral Presentation, ENAR Conference, Baltimore, MA \hfill {Mar 2014}
+\begin{itemize}[noitemsep,topsep=0pt]
+\item{Meta-analytic framework for sparse K-means to identify disease\\ subtypes in multiple transcriptomic studies.}
+\end{itemize}
+
+\item Poster, Dean's Day's competition, GSPH, University of Pittsburgh \hfill {Mar 2014}
+\begin{itemize}[noitemsep,topsep=0pt]
+\item{Meta-analytic framework for sparse K-means to identify disease \\ subtypes in multiple transcriptomic studies.}
+\end{itemize}
+\end{itemize}
+
+\textbf{Seminar talk}
+\begin{itemize}[noitemsep,topsep=0pt]
+\item Department of Biostatistics, University of Pittsburgh  \hfill Nov 2015
+\begin{itemize}[noitemsep,topsep=0pt]
+\item{How to use Latex to make slides}
+\end{itemize}
+\end{itemize}
+
+
+\end{rSection}
+
+\begin{rSection}{References}
+\textbf{George C. Tseng}
+\begin{itemize}[noitemsep,topsep=0pt]
+\item[] Professor \hfill {Phone: 412-624-5318}\\
+Department of Biostatistics (primary appointment) \\
+Department of Human Genetics \\
+Department of Computational \& Systems Biology 
+\hfill{E-mail: ctseng@pitt.edu }\\
+University of Pittsburgh
+\end{itemize}
+
+\textbf{Yong Seok Park}
+\begin{itemize}[noitemsep,topsep=0pt]
+\item[] Assistant Professor \hfill {Phone: 412-624-3028}\\
+Department of Biostatistics \hfill{E-mail: yongpark@pitt.edu}\\
+University of Pittsburgh
+\end{itemize}
+
+\textbf{David A. Lewis, MD}
+\begin{itemize}[noitemsep,topsep=0pt]
+\item[] Distinguished Professor of Psychiatry and Neuroscience, \\
+Thomas Detre Professor of Academic Psychiatry, Chair  
+\hfill {Phone: 412-246-6010}\\
+Department of Psychiatry \hfill{E-mail: lewisda@upmc.edu}\\
+University of Pittsburgh
+\end{itemize}
+
+\end{rSection}
+
+\begin{rSection}{Running}
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item Bank of America Chicago Marathon, Chicago, IL \hfill {10/09/2016}
+    \item[] {\href{http://results.chicagomarathon.com/2016/?content=detail&fpid=search&pid=search&idp=999999107FA309000019B627&lang=EN_CAP&event=MAR&lang=EN_CAP&search\%5Bname\%5D=Huo&search\%5Bfirstname\%5D=Zhiguang&search_sort=name&search_event=MAR}{TIME 04:08:27}}       
+    \item First National Bank Pittsburgh Triathlon (Sprint), Pittsburgh, PA \hfill {08/14/2016}
+    \item[] {\href{https://results.chronotrack.com/event/results/event/event-22695}{{TIME 1:10:30} }}          
+    (only biking + running)  
+    \item Dick's Sporting Goods Pittsburgh Marathon, Pittsburgh, PA \hfill {05/01/2016}
+    \item[] {\href{http://results.xacte.com/?mid=79}{TIME 3:58:46}}       
+    \item First National Bank Pittsburgh Triathlon (Olympic standard), Pittsburgh, PA \hfill {08/09/2015}
+    \item[] {\href{http://rankings.usatriathlon.org/Event/ViewEvent/222386/1}{Time 3:29:24}}       
+    \item {Dick's Sporting Goods Pittsburgh Marathon}, {Pittsburgh, PA} \hfill  {05/03/2015}
+    \item[] {\href{http://results.xacte.com/?mid=79}{TIME 3:49:38}}       
+    \item {Dick's Sporting Goods Pittsburgh Marathon}, {Pittsburgh, PA} \hfill  {{05/04/2014}}
+    \item[]{\href{http://results.active.com/events/dick-s-sporting-goods-pittsburgh-marathon--4/marathon/zhiguang-huo/}{TIME 4:07:44}}
+    \item {Dick's Sporting Goods Pittsburgh Marathon}, {Pittsburgh, PA} \hfill  {05/05/2013}
+    \item[]{TIME 4:48:49}
+\end{itemize}
+
+\end{rSection}
+
+
+
+%----------------------------------------------------------------------------------------
+%	EXAMPLE SECTION
+%----------------------------------------------------------------------------------------
+
+%\begin{rSection}{Section Name}
+
+%Section content\ldots
+
+%\end{rSection}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
