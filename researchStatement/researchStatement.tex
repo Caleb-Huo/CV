@@ -3,7 +3,7 @@
 \documentclass[a4paper, 10pt]{article}
 % Seems like it does not support 9pt and less. Anyways I should stick to 10pt.
 %\documentclass[a4paper, 9pt]{article}
-\topmargin-2.0cm
+\topmargin-1.0cm
 
 \usepackage{fancyhdr}
 \usepackage{pagecounting}
@@ -40,14 +40,14 @@
 %\rhead{\thepage}
 \renewcommand{\headrulewidth}{0pt} 
 \renewcommand{\footrulewidth}{0pt} 
-\fancyfoot[C]{\footnotesize \url{http://www.pitt.edu/\~zhh18/dev}} 
+%%\fancyfoot[C]{\footnotesize \url{http://www.pitt.edu/\~zhh18/dev}} 
 
 %\pagestyle{myheadings}
 %\markboth{Sundar Iyer}{Sundar Iyer}
 
 \pagestyle{fancy}
 \lhead{\textcolor{gray}{\it Zhiguang (Caleb) Huo}}
-\rhead{\textcolor{gray}{\thepage/\totalpages{}}}
+%\rhead{\textcolor{gray}{\thepage/\totalpages{}}}
 %\rhead{\thepage}
 %\renewcommand{\headrulewidth}{0pt} 
 %\renewcommand{\footrulewidth}{0pt} 
@@ -65,235 +65,139 @@
 
 
 My research interest lies in both statistical \textbf{methodology and application on genomics and bioinformatics}.
-Nowadays, large amount of genomics data are available and required to develop rigorous statistical method to understand the disease and pursue better treatment.
-These datasets provided unprecedented opportunities to reveal cancer mechanisms via combining multiple cohorts or multiple-level omics data types.
+Nowadays, large amount of genomic data are available in public domain and 
+these datasets provide unprecedented opportunities to reveal disease mechanisms via combining multiple cohorts or multiple-level omics data types.
 I have worked on \textbf{horizontal omics meta-analysis} (combine multiple cohorts of the same type of omics data) and 
 \textbf{vertical omics integrative analysis} (combine multi-level omics data of the same patient cohort),
 which will help increase statistical power, interpretability and reproducibility.
-\textbf{I am particular interested in Bayesian approach, regularizations (frequentist perspective), graphical models and effective statistical computing,}
-which are capable of accommodating the high-dimensional nature of genomics data.
+In terms of statistical methodology,
+\textbf{I am particularly interested in modeling and optimization for high-dimensional data, Bayesian methods, graphical models and statistical computing,}
+which are capable of accommodating the high-dimensional nature of genomic data.
 In terms of genomics and bioinformatics application,
-I have worked extensively on various \textbf{cancer} types as well as \textbf{psychiatry} data with local collaborators. 
-These genomic data ranges from microarray to sequencing, gene expression, copy number variation to methylation.
-These collaborations not only allowed me to apply statistics methods towards innovating biological findings,
-but also motivated me to develop most appropriate statistical methods for their data.
-In return, I have worked on user friendly \textbf{software development} and efficient computing algorithm, in order to facilitate these biological application.
-However, genomics and bioinformatics are fast evolving field and 
-new types of data are gradually replacing old types of data (e.g. NGS data are replacing microarray data).
-Therefore, I am willing to expand my research towards new powerful data types (e.g. imaging data, \textbf{single cell data})
-and I have actively exposed to single cell data.
+I have collaborated with biologists in the fields of \textbf{cancer} and \textbf{psychiatry} to analyze a broad range of genomic data (e.g. microarray data to sequencing data),
+which motivates me to develop practical methodology and user-friendly softwares.
+However, genomics and bioinformatics are fast-evolving field and 
+I am willing to expand my research towards new powerful data types (e.g. imaging data, \textbf{single cell data}).
+My long term goal is to bridge bioinformatics and statistics/machine learning and eliminate the gap between them.
 
-Below is a summary of my \textbf{past and going research, as well as future research plan} in terms of statistical methodology and bioinformatics application.
-
+Below is a highlight of my \textbf{past and going research, as well as future research plan}.
 
 \section{Statistical methodology}
-
+I am particularly interested in modeling and optimization for high-dimensional data, Bayesian methods, graphical models and statistical computing.
+Note that some of these areas can potentially overlap.
+I am not restricted to these areas I have explored.
+If I encounter other meaningful and challenging problems,
+I am definitely eager to learn or collaborate with other people.
 
 \subsection{Data integration}
 
-Due to rapid development of high-throughput experimental techniques and fast dropping prices, many transcriptomic datasets have
+\begin{itemize}
+\item \textbf{Past and on-going research:}
+
+Due to rapid development of high-throughput experimental techniques and dropping prices, many transcriptomic datasets have
 been generated and accumulated in the public domain (e.g. TCGA, GEO, SRA).
-Local research institute/hospitals also generate tons of data.
 Single cohort/data type may suffer from small sample size issue or reproducibility issue.
-There are multiple cohorts generated from different sources, 
-also given the same cohort, there are multiple data types (gene expression, methylation, CNV, mutation).
-A natural question is how to combine or integrate these complex data and increase statistical power and interpretation.
-There are two directions for data integration: horizontal meta-analysis and vertical integration.
-
-\subsubsection{Horizontal meta-analysis }
-
-Meta-analysis aims to combine multiple same-type genomic data to increase statistical power, accuracy and validated conclusion.
-I have been extensively working in this area and developed several statistical approaches:
-in terms of disease subtype discovery; differential expression gene detection; differential expression meta-pattern detection;
-differential co-expression network and dimension reduction by combining same type of omics data of multiple cohorts.
-
-\begin{itemize}
-\item \textbf{A meta-analytic framework of sparse clustering: }
-Disease phenotyping by omics data has become a popular approach that potentially can lead to better personalized treatment. 
-Identifying disease subtypes via unsupervised machine learning is the first step towards this goal.
-I have developed \textbf{Meta Sparse K-means} algorithm\cite{ref:MSKM} to discovery disease subtype from multiple genomics cohort.
-The algorithm will achieve feature selection and guarantee consistent clustering pattern across cohorts simultaneously.
-The algorithm is important in that it will enhance the reproducibility and stability of disease subtype discovery.
-
-\item \textbf{A meta-analytic framework of bio-marker detection of differential expression pattern characterization: }
-Meta-analysis combining multiple transcriptomic studies can increase statistical power to detect disease related biomarkers.
-I have developed a novel Bayesian latent hierarchical model (\textbf{BayesMP})\cite{ref:BayesMP},
-which is capable of detecting genes that are differentially expressed (DE) in only a subset of the combined studies,
-and the latent variables help quantify homogeneous and heterogeneous differential expression signals across studies.
-This is helpful to increase disease biomarkers detection power and facilitate biologist to formulate hypothesis from the data.
-
-\item \textbf{A meta-analysis framework for differential co-expression network detection.}
-This is a project that I was partially involved in.
-Gene co-expression network analysis from large transcriptomic studies is often used to elucidate potential gene-gene interactions and regulatory mechanisms. 
-Co-expression networks are first constructed in cases and controls separately in each study. 
-Differential co-expression seed modules are detected by optimizing an energy function via simulated annealing.
-The result sheds light on the underlying disease mechanisms in a systems manner. 
-
-\item \textbf{Meta analytical principal component analysis.}
-This is a project that I was partially involved in.
-Due to high-dimensional nature of the data, 
-methods such as principal component analysis (PCA) have been widely applied, 
-aiming at effective dimension reduction and exploratory visualization.
-In this paper, 
-we combine multiple omics datasets of identical or similar biological hypothesis and introduce two variations of meta-analyticframework of PCA, namely MetaPCA.
-
-\end{itemize}
-
-
-
-
-\subsubsection{Genomic data integration}
-Genomic data integration combines multi-omics data 
+A natural question is how to combine or integrate these complex data and increase statistical power, interpretation and reproducibility.
+This includes two direction: \textbf{horizontal meta-analysis} and \textbf{vertical integrative analysis}. 
+Horizontal meta-analysis aims to combine genomic data of same type from multiple cohorts.
+I have worked on several meta-analytical methodologies including 
+\textbf{disease subtype discovery}\cite{ref:MSKM}, 
+\textbf{candidate marker detection}\cite{ref:BayesMP},
+\textbf{differential co-expression network detection}\cite{ref:metaDCN}
+and \textbf{dimensional reduction}\cite{ref:metaPCA}.
+Vertical integrative analysis combines multi-omics data 
 (e.g. gene expression, CNV, genotyping, methylation, somatic mutation, miRNA) of the same cohort.
-We could gain statistical power and have a better understanding of the inner omics relationships.
-\begin{itemize}
-\item \textbf{An integration framework of sparse clustering: }
-With the accumulation of massive multi-omics datasets and established biological knowledge databases,
-omics data integration with incorporation of rich existing biological knowledge is essential for deciphering biological mechanism behind
-the complex diseases.
-I proposed an integrative sparse K-means (\textbf{IS-Kmeans})\cite{ref:ISKmeans} approach to combine multi-omics datasets to discover disease subtypes with the guidance of prior biological knowledge via sparse overlapping group lasso.
-This computation efficient algorithm helps reveal consistent disease subtype patterns and inner omics relationships.
+I have developed a disease subtype discovery algorithm \textbf{integrating multi-level omics data with prior biological information}\cite{ref:ISKmeans}.
+These methods will help better characterize the disease and deliver personalized medicine.
 
-\item \textbf{Bayesian omics data integration}
-
-\end{itemize}
-\subsubsection{Future direction}
-Integrating epi-genetic data, neuroimaging data.
-
-
-\subsection{High dimensional data optimization and statistical computing}
-Genomics data has more than 20,000 genes in human being and normally there are only tens or hundreds of samples.
-Not all genes are related to the disease of interest.
-How to effectively select the intrinsic subset of genes from the high dimensional data are very important.
-There are two main folds for high dimensional data: 1, optimization; 2, theory.
-I have worked on high dimensional data optimization problems exclusively.
-
-\subsubsection{High dimensional data optimization}
-I am quite familiar with optimization algorithms, especially varies lasso related problems.
-My research projects are highly involved with optimization (ref).
-\begin{itemize}
-\item KKT, convert the complex problem to a optimization problem with lasso.
-\item The second example ADMM to solve the overlapping group lasso problem.
-\end{itemize}
-\subsubsection{statistical computing}
-
-\begin{itemize}
+\item \textbf{Future direction:}
+\begin{enumerate}
+\item I have worked on horizontal meta-analysis and vertical integrative analysis respectively. 
+A natural extension is \textbf{two-way integration} - combing horizontal meta-analysis and vertical integrative analysis. 
 \item 
-Adaptively weighted Fisher's method (AW) is an powerful approach to combine p-values from K independent studies 
-and provide better biological interpretation by characterizing which studies contribute to meta-analysis.
-However, the original AW method suffers from slow computing because of permutation.
-By using importance sampling and spline, 
-we obtain a fast computing for AW, which is weighted fisher.
-This is an on-going work.
-
-\item github. Github is originally design for programmers. 
-It is also very powerful for statistician.
-This is an easy way to host my code, program and packages.
-In the future, I will also make my teaching materials on gitbub.
-
-\end{itemize}
-
-\subsubsection{Future work}
-\begin{itemize}
-\item I have worked extensively on lasso, group lasso or overlapping group lasso problems.
-Other regularization techniques such as penalization on inverse covariance matrix or low rank penalty are also appealing to genomic applications.
-\item High dimensional problems are challenging in perspective of optimization and theory.
-I have been working of high-dimensional optimization problem quite a lot.
-High-dimensional theory is also interesting and challenging, and it can provide theoritical guarantee for the sound methodology.
-
+Newly innovated \textbf{epigenetic data} and \textbf{neuroimaging data} also allow people to understand diseases with new insight.
+Integrating these data types with genomic data is a potential future direction.
+\end{enumerate}
 
 \end{itemize}
 
 
-\subsection{Bayesian inference and graphical model}
-Bayesian is very convenient to model complex data structure, 
-get soft inference on result.
-Graphical model is very powerful to model the dependent structure of data.
-It has been widely used in the field of computational biology, computer vision, natural language processing.
 
-\subsubsection{Bayesian nonparametric}
+
+
+\subsection{Modeling and optimization for high dimensional data}
 \begin{itemize}
-\item 
-For meta-analysis combining p-value methods, 
-frequentists' approach may suffer from in composite null and alternative hypothesis,
-which will make the inference and false positive rate control not accurate.
-Bayesian is a natural way to get around this problem and I developed BayesMP.
-In order to preserve the uncertainty of the alternative distribution and avoid empirical Bayes approach, 
-we utilized the Bayesian non-parametric model (Dirichlet process) to characterize the alternative distribution.
+\item \textbf{Past and on-going research:}
+
+High-throughput data (e.g. genomic data) has more than 20,000 genes in human being but only tens or hundreds of samples.
+This large $p$ and small $n$ problem brings statistical challenges to reveal disease mechanism behind the big data.
+I am particularly interested in modeling high-dimensional data and solving related optimization problem with various forms of \textbf{regularizations}.
+I have used a \textbf{lasso penalty} on clustering problems to formalize a statistical objective and perform optimization to solve the problem\cite{ref:MSKM}.
+In another clustering problem, which required incorporating prior knowledge, 
+I proposed \textbf{sparse overlapping group lasso} and used \textbf{ADMM} to solve the challenging optimization problem\cite{ref:ISKmeans}.
+By these techniques, we can discover the intrinsic information behind the high dimensional data.
+
+\item \textbf{Future direction:}
+\begin{enumerate}
+\item I have worked on lasso, group lasso or overlapping group lasso problems.
+Other regularization techniques such as \textbf{penalization on inverse covariance matrix} or \textbf{low rank penalty} are also appealing to genomic applications.
+\item High dimensional problems are challenging in perspectives of both optimization and theory.
+I have worked on high-dimensional optimization problem quite a lot.
+\textbf{High-dimensional theory} is also interesting and challenging, which is essential for a  sound methodology with theoretical guarantee. 
+\end{enumerate}
+
 \end{itemize}
 
-\subsubsection{single cell methylation imputation using conditional random field}
+\subsection{Bayesian methods and graphical models}
 \begin{itemize}
-\item Epigenetic plays an important role in gene regulation. 
-Recent development of single cell methylation makes it feasible to look at methylation at single cell level. 
-However, due to inadequate of bisulfate conversion and sequencing error, 
-the observed methylation level is not interpretable.
-I proposed a fast single cell imputation method using conditional random field.
-This is an on-going project and part of my thesis as well.
-\end{itemize}
+\item \textbf{Past and on-going research:}
 
-\subsubsection{Feature selection using Bayesian approach}
-\begin{itemize}
-\item 
-Variable selection is a pervasive question in modern high-dimensional data analysis where the numberof features often exceeds the sample size (a.k.a. small-n-large-p problem). Incorporation of group structure knowledgeto improve variable selection has been widely studied. In this paper, we consider prior knowledge of a multi-layeroverlapping group structure to improve variable selection in regression setting.
-\end{itemize}
+Bayesian methods and graphical models are very convenient to model complex data and its dependent structure.
+I have worked on a \textbf{Bayesian non-parametric} approach to combine summary statistics from multiple cohorts to perform meta-analysis\cite{ref:BayesMP}.
+I am working on \textbf{Bayesian variable selection} problems\cite{ref:MOG} with multi-layer overlapping groups.
+Bayesian approaches and graphical models are also growing field themselves and I expect these technique will play an important role genomics and bioinformatics.
 
-\subsubsection{Future work}
-\begin{itemize}
-\item 
-Single cell mixture problem.
-\item 
-Single cell expression clustering.
+\item \textbf{Future direction:}
+\begin{enumerate}
+\item I have achieved success on high-dimensional clustering problem using frequentist approaches.
+I will tackle the same problem in Bayesian perspective.
+\item Part of my thesis is using \textbf{conditional random field} for a fast single cell imputation.
+
+\end{enumerate}
+
 \end{itemize}
 
 
 \section{Bioinformatics application}
 As a biostatistician,
-an important job is to work with local biologist on their data.
-This is exciting for me not only I can learn interesting and well-designed experiment,
-but also their data can motivate me to develop use statistical methodology.
-Genomics and bioinformatics are fast moving fields and I have been exposed to multiple types of data.
-Though data are different and processing pipeline may differnet,
-but the enssence of statistical approach remain the same.
-\subsection{Genomics data application}
+an important job is to work with local biologists on their data.
+This is exciting for me not only I can help biologists towards innovating scientific findings,
+but also their data can motivate me to develop relevant statistical methodology.
+
 \begin{itemize}
-\item Cancer research.
-Disease subtype of breast cancer, 
-DNA methylation via sequencing,
-copy number variation in prostate cancer, 
-\item Psychiatry.
-Cell specific Psychiatry diseases, 
-circadian patterns, 
-sex related depression effect,
-human iPSC data.
-\item At this stage, I am also exposured in single cell data (single cell methylation and single cell gene expression).
-I am trying to develop methods to the newly developed data type.
-This will be part of my thesis.
+\item \textbf{Past and on-going research:}
+
+I have been mainly involved in \textbf{cancer} and \textbf{psychiatry} diseases research.
+For cancer research, I have worked on disease subtypes of breast cancer\cite{ref:ILC},
+DNA methylation of parity-induced mice\cite{ref:mouseParity}, 
+copy number variation of prostate cancer\cite{ref:prostate},
+fusion genes\cite{ref:fusionGene}.
+For psychiatry diseases,
+I have worked on schizophrenia, bipolar disorder and major depressive disorder in human pyramidal neurons\cite{ref:MO1} and parvalbumin neurons\cite{ref:PVL3}.
+Currently, I am working on other aspects of in psychiatry (e.g. Induced pluripotent stem cell, sex related depression effect and circadian pattern).
+
+\item \textbf{Future direction:}
+\begin{enumerate}
+\item Collaboration is always important part for statistician/biostatistician.
+I will definitely seek for opportunities to work with local biologists, which will in turn motivate statistical methodology development.
+\item I have worked extensively on microarray data and sequencing data.
+But I understand that this is a fast moving field.
+I am ready for any newly developed data types, as technique advances.
+At this stage, I am exposed to single cell data (single cell methylation and single cell gene expression) as part of my thesis.
+\end{enumerate}
 \end{itemize}
 
-\subsection{Software development}
-There are often gaps between biology and statistics and bioinformaticians should be the bridge to bring them together.
-I have developed several R packages for other user to use.
-However, these are far less for biologists.
-User-friendly software is the key component for biologists who are not familiar with statistical computing.
-Previously I was involved in Meta Omics R package.
-I spent a summer to improve the Meta Omics R package into a user-friendly JAVA software.
-Now, we are developing a Meta Omics suit implemented using R shiny. 
-The purpose is to design user-friendly software to facilitate biologist to fully utilize these statistical algorithms.
 
-\section{Summary}
-To summarize,
-I am interested in both genomics/bioinformatics methodology and application.
-
-For methodology, I am particular interested in
-meta-analysis, data integration, high-dimensional data analysis, Bayesian approach, optimization, statistical computing, and software development.
-For high-dimensional data, theory is equally important as optimization. I may pursue high-dimensional data theory in the future.
-
-For application, I am interested in all types of genomics data (microarray, sequencing...).
-But the field is moving very fast and data are evolving so quickly. 
-I am also interested in imaging data, if there is an opportunity for me in the future.
-
-I will keep update with the data and develop cutting edge methodology to help biologists with the data interpretation.
 
 \begin{thebibliography}{9}
 \bibitem{ref:MSKM} 
@@ -308,53 +212,50 @@ Bayesian latent hierarchical model for transcriptomic meta-analysis to detect bi
 Integrative Sparse $K$-means for disease subtype discovery using multi-level omics data.
 Submitted to \emph{Annals of Applied Statistics} (under second round of review).
 
+\bibitem{ref:metaDCN} 
+Li Zhu, Ying Ding, Cho-Yi Chen, Lin Wang, {\bf Zhiguang Huo}, SungHwan Kim, Christos Sotiriou, Steffi Oesterreich and George C. Tseng. (2016)
+MetaDCN: meta-analysis framework for differential coexpression network detection with an application in breast cancer.
+\emph{Bioinformatics} (accepted).
+
+\bibitem{ref:metaPCA} 
+SungHwan Kim, Dongwan Kang, {\bf Zhiguang Huo}, Yongseok
+Park, George C. Tseng. (2016)
+Meta-analytic principal component analysis.
+Submitted.
+
+\bibitem{ref:MOG} 
+Li Zhu, {\bf Zhiguang Huo}, Tianzhou Ma and George Tseng. 
+Bayesian indicator variable selection model with multi-layer overlapping groups.
+(in preparation).
+
 \bibitem{ref:fusionGene} 
 Silvia Liu, Wei-Hsiang Tsai, Ying Ding, Rui Chen, Zhou Fang, {\bf Zhiguang Huo}, SungHwan Kim, Tianzhou Ma, Ting-Yu Chang, Nolan Michael Priedigkeit, Adrian V. Lee, Jianhua Luo, Hsei-Wei Wang, I-Fang Chung, George C. Tseng. (2015).
 Comprehensive evaluation of fusion transcript detection algorithms and a meta-caller to combine top performing methods in paired-end RNA-seq data.
 \emph{Nucleic Acids Research}, 10.1093/nar/gkv1234.
  
-\bibitem{knuthwebsite} 
-Tiffany A. Katz, Serena G. Liao, Vincent J. Palmieri, Robert K. Dearth, Thushangi Pathiraja, {\bf Zhiguang Huo}, Patricia Shaw, Sarah Small, Nancy E. Davidson, David G. Peters, George C. Tseng, Steffi Oesterreich, Adrian V. Lee. (2015) Targeted DNA methylation screen in the mouse mammary genome reveals a parity-induced hypermethylation of igf1r which persists long after parturition. \emph{Cancer Prevention Research}, pages canprevres-0178.
+\bibitem{ref:mouseParity} 
+ Tiffany A. Katz, Serena G. Liao, Vincent J. Palmieri, Robert K. Dearth, Thushangi Pathiraja, {\bf Zhiguang Huo}, Patricia Shaw, Sarah Small, Nancy E. Davidson, David G. Peters, George C. Tseng, Steffi Oesterreich, Adrian V. Lee. (2015) Targeted DNA Methylation Screen in the Mouse Mammary Genome Reveals a Parity-Induced Hypermethylation of IGF1R That Persists Long after Parturition. \emph{Cancer Prevention Research} 8, no. 10 (2015): 1000-1009.
 
-\bibitem{knuthwebsite} 
+\bibitem{ref:prostate} 
 Yan P. Yu, Silvia Liu, {\bf Zhiguang Huo}, Amantha Martin, Joel B. Nelson, George C. Tseng and Jian-Hua Luo. (2015) Genomic copy number variations in the genomes of leukocytes predict prostate cancer clinical outcomes. \emph{PloS one}, 10(8):e0135982.
 
-\bibitem{knuthwebsite} 
-Xingbin Wang, Dongwan Kang, Kui Shen, Chi Song, Shuya Lu, Lunching Chang, Serena G. Liao, {\bf Zhiguang Huo}, Naftali Kaminski, Etienne Sibille, Yan Lin, Jia Li and George C. Tseng. (2012) A Suite of R Packages for Quality Control, Differentially Expressed Gene and Enriched Pathway Detection in Microarray Meta-analysis. \emph{Bioinformatics}, 28:2534-2536.
     
-
-\bibitem{knuthwebsite} 
+\bibitem{ref:MO1} 
 Dominique Arion, {\bf Zhiguang Huo}, John F. Enwright, John P. Corradi, George Tseng and David A. Lewis.
 Transcriptome alterations in prefrontal pyramidal neurons distinguish schizophrenia from bipolar and major depressive disorders.
 Submitted to \emph{Biological Psychiatry}, (under second round of review).
 
-\bibitem{knuthwebsite} 
-SungHwan Kim, Dongwan Kang, {\bf Zhiguang Huo}, Yongseok
-Park, George C. Tseng. (2016)
-Meta-analytic principal component analysis.
-Submitted to \emph{Annals of Applied Statistics} (under revision).
 
-\bibitem{knuthwebsite} 
-Li Zhu, Ying Ding, Cho-Yi Chen, Lin Wang, {\bf Zhiguang Huo}, SungHwan Kim, Christos Sotiriou, Steffi Oesterreich and George C. Tseng. (2016)
-MetaDCN: meta-analysis framework for differential coexpression network detection with an application in breast cancer
-Submitted to \emph{Bioinformatics} (under revision).
 
-\bibitem{knuthwebsite} 
+\bibitem{ref:ILC} 
 Oesterreich, S., Katz, T.A., Logan, G., Levine, K., Nagle, A., {\bf Huo, Z.}, Tseng, G.C., Rui, H., Lee, A.V. and Butler, L.M., 2016. Abstract PD2-08: Potential role of prolactin signaling in development and growth of the lobular subtype of breast cancer. \emph{Cancer Research}, 76(4 Supplement), pp.PD2-08.
 
-\bibitem{knuthwebsite} 
-Enwright, John, Dominique Arion, John Corradi, Aiqing He, {\bf Zhiguang Huo}, George Tseng, and David Lewis. (2015) Transcriptome Profiling of Layer 3 Parvalbumin Neurons from the Dorsolateral Prefrontal Cortex of Schizophrenia Subjects.
-\emph{NEUROPSYCHOPHARMACOLOGY}, vol. 40, pp. S400-S401. 
-
-\bibitem{knuthwebsite} 
+\bibitem{ref:PVL3} 
 John Enwright,  Dominique Arion, {\bf Zhiguang Huo}, George Tseng and David A. Lewis. 
 Transcriptome alterations in layer 3 parvalbumin neurons in the dorsolateral prefrontal cortex in schizophrenia differ from those in layer 3 pyramidal cells.
 (in preparation).
 
-\bibitem{knuthwebsite} 
-{\bf Zhiguang Huo}, Shaowu Tang, YongSeok Park and George Tseng. 
-Biomarker categorization and fast computing of adaptively weighted Fisher's method for meta-analysis in omics applications.
-(in preparation).
+
 
 \end{thebibliography}
 
