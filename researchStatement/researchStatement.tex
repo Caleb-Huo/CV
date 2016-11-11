@@ -9,7 +9,12 @@
 \usepackage{pagecounting}
 \usepackage[dvips]{color}
 \usepackage{hyperref}
+\usepackage{enumitem}
 
+%\setlist[itemize]{itemsep=0mm}
+%\setlist[enumerate]{itemsep=0mm}
+\setlist[enumerate]{nolistsep,leftmargin=*}
+\setlist[itemize]{leftmargin=*}
 % Color Information from - http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/latex_advanced/node13.html
 
 % NEW COMMAND
@@ -46,7 +51,7 @@
 %\markboth{Sundar Iyer}{Sundar Iyer}
 
 \pagestyle{fancy}
-\lhead{\textcolor{gray}{\it Zhiguang (Caleb) Huo}}
+\lhead{\textcolor{gray}{\it Zhiguang Huo (Caleb)}}
 %\rhead{\textcolor{gray}{\thepage/\totalpages{}}}
 %\rhead{\thepage}
 %\renewcommand{\headrulewidth}{0pt} 
@@ -60,34 +65,33 @@
 \begin{center}
 {\LARGE \bf RESEARCH STATEMENT}\\
 \vspace*{0.1cm}
-{\normalsize Zhiguang (Caleb) Huo (zhh18@pitt.edu)}
 \end{center}
 
 
-My research interest lies in both statistical \textbf{methodology and application on genomics and bioinformatics}.
-Nowadays, large amount of genomic data are available in public domain and 
-these datasets provide unprecedented opportunities to reveal disease mechanisms via combining multiple cohorts or multiple-level omics data types.
+My research interest lies in both statistical \textbf{methodology} and \textbf{application} on \textbf{genomics and bioinformatics}.
+Nowadays, large amount of genomic data are publicly available and 
+integrating these datasets provides unprecedented opportunities to reveal disease mechanisms.
 I have worked on \textbf{horizontal omics meta-analysis} (combine multiple cohorts of the same type of omics data) and 
 \textbf{vertical omics integrative analysis} (combine multi-level omics data of the same patient cohort),
-which will help increase statistical power, interpretability and reproducibility.
+which will help increase statistical power, interpretability, reproducibility and understanding the disease.
 In terms of statistical methodology,
 \textbf{I am particularly interested in modeling and optimization for high-dimensional data, Bayesian methods, graphical models and statistical computing,}
 which are capable of accommodating the high-dimensional nature of genomic data.
 In terms of genomics and bioinformatics application,
-I have collaborated with biologists in the fields of \textbf{cancer} and \textbf{psychiatry} to analyze a broad range of genomic data (e.g. microarray data to sequencing data),
+I have collaborated with biologists in fields of \textbf{cancer} and \textbf{psychiatry} to analyze a broad range of genomic data (e.g. microarray and sequencing data),
 which motivates me to develop practical methodology and user-friendly softwares.
 However, genomics and bioinformatics are fast-evolving field and 
-I am willing to expand my research towards new powerful data types (e.g. imaging data, \textbf{single cell data}).
-My long term goal is to bridge bioinformatics and statistics/machine learning and eliminate the gap between them.
+I am open minded to expand my research towards new data types (e.g. imaging data, \textbf{single cell data}) in the future.
+My long term goal is to bridge bioinformatics and statistics/machine learning.
 
-Below is a highlight of my \textbf{past and going research, as well as future research plan}.
+Below is a highlight of my \textbf{past and on-going research}, as well as \textbf{future research plan}.
 
 \section{Statistical methodology}
-I am particularly interested in modeling and optimization for high-dimensional data, Bayesian methods, graphical models and statistical computing.
+I am particularly interested in data integration, modeling and optimization for high-dimensional data, Bayesian methods, graphical models and statistical computing.
 Note that some of these areas can potentially overlap.
 I am not restricted to these areas I have explored.
 If I encounter other meaningful and challenging problems,
-I am definitely eager to learn or collaborate with other people.
+I am definitely eager to learn or collaborate with other researchers.
 
 \subsection{Data integration}
 
@@ -96,9 +100,9 @@ I am definitely eager to learn or collaborate with other people.
 
 Due to rapid development of high-throughput experimental techniques and dropping prices, many transcriptomic datasets have
 been generated and accumulated in the public domain (e.g. TCGA, GEO, SRA).
-Single cohort/data type may suffer from small sample size issue or reproducibility issue.
-A natural question is how to combine or integrate these complex data and increase statistical power, interpretation and reproducibility.
-This includes two direction: \textbf{horizontal meta-analysis} and \textbf{vertical integrative analysis}. 
+Single cohort/data type may suffer from small sample size issue.
+A natural question is how to combine these complex data and increase statistical power, interpretation and reproducibility.
+This includes two directions: \textbf{horizontal meta-analysis} and \textbf{vertical integrative analysis}. 
 Horizontal meta-analysis aims to combine genomic data of same type from multiple cohorts.
 I have worked on several meta-analytical methodologies including 
 \textbf{disease subtype discovery}\cite{ref:MSKM}, 
@@ -106,17 +110,17 @@ I have worked on several meta-analytical methodologies including
 \textbf{differential co-expression network detection}\cite{ref:metaDCN}
 and \textbf{dimensional reduction}\cite{ref:metaPCA}.
 Vertical integrative analysis combines multi-omics data 
-(e.g. gene expression, CNV, genotyping, methylation, somatic mutation, miRNA) of the same cohort.
+(e.g. gene expression, CNV, genotyping, methylation) of the same cohort.
 I have developed a disease subtype discovery algorithm \textbf{integrating multi-level omics data with prior biological information}\cite{ref:ISKmeans}.
-These methods will help better characterize the disease and deliver personalized medicine.
+These methods will help better characterize a complex disease and develop towards personalized medicine.
 
 \item \textbf{Future direction:}
 \begin{enumerate}
 \item I have worked on horizontal meta-analysis and vertical integrative analysis respectively. 
-A natural extension is \textbf{two-way integration} - combing horizontal meta-analysis and vertical integrative analysis. 
+A natural extension is towards \textbf{two-way integration} by combing horizontal meta-analysis and vertical integrative analysis. 
 \item 
-Newly innovated \textbf{epigenetic data} and \textbf{neuroimaging data} also allow people to understand diseases with new insight.
-Integrating these data types with genomic data is a potential future direction.
+More and more \textbf{epigenetic, single cell} and \textbf{neuroimaging data} are becoming available to help understand diseases with new insight.
+Integrating these data with genomic data is a potential future direction.
 \end{enumerate}
 
 \end{itemize}
@@ -134,16 +138,16 @@ This large $p$ and small $n$ problem brings statistical challenges to reveal dis
 I am particularly interested in modeling high-dimensional data and solving related optimization problem with various forms of \textbf{regularizations}.
 I have used a \textbf{lasso penalty} on clustering problems to formalize a statistical objective and perform optimization to solve the problem\cite{ref:MSKM}.
 In another clustering problem, which required incorporating prior knowledge, 
-I proposed \textbf{sparse overlapping group lasso} and used \textbf{ADMM} to solve the challenging optimization problem\cite{ref:ISKmeans}.
-By these techniques, we can discover the intrinsic information behind the high dimensional data.
+I proposed \textbf{sparse overlapping group lasso} and used \textbf{alternating direction method of multipliers (ADMM)} to solve the challenging optimization problem\cite{ref:ISKmeans}.
+By these models and techniques, we can discover the intrinsic information behind the high dimensional data.
 
 \item \textbf{Future direction:}
 \begin{enumerate}
 \item I have worked on lasso, group lasso or overlapping group lasso problems.
-Other regularization techniques such as \textbf{penalization on inverse covariance matrix} or \textbf{low rank penalty} are also appealing to genomic applications.
-\item High dimensional problems are challenging in perspectives of both optimization and theory.
-I have worked on high-dimensional optimization problem quite a lot.
-\textbf{High-dimensional theory} is also interesting and challenging, which is essential for a  sound methodology with theoretical guarantee. 
+Other regularization techniques such as \textbf{penalization on precision matrix} or \textbf{low rank penalty} are also appealing to genomic applications.
+\item High dimensional problems are challenging from perspectives of both optimization and theory.
+I have worked extensively on high-dimensional optimization problems.
+\textbf{High-dimensional theory} is also interesting and challenging to me, which is essential for a  sound methodology with theoretical guarantees. 
 \end{enumerate}
 
 \end{itemize}
@@ -152,16 +156,18 @@ I have worked on high-dimensional optimization problem quite a lot.
 \begin{itemize}
 \item \textbf{Past and on-going research:}
 
-Bayesian methods and graphical models are very convenient to model complex data and its dependent structure.
+Bayesian methods and graphical models are very flexible to model and reflect the biological generative process and its complex dependent structure.
 I have worked on a \textbf{Bayesian non-parametric} approach to combine summary statistics from multiple cohorts to perform meta-analysis\cite{ref:BayesMP}.
-I am working on \textbf{Bayesian variable selection} problems\cite{ref:MOG} with multi-layer overlapping groups.
-Bayesian approaches and graphical models are also growing field themselves and I expect these technique will play an important role genomics and bioinformatics.
+I am working on \textbf{Bayesian variable selection} problems\cite{ref:MOG} with prior knowledge of multi-layer overlapping groups.
+Bayesian approaches and graphical models are also growing fields themselves and I expect these techniques will play an important role in genomics and bioinformatics.
 
 \item \textbf{Future direction:}
 \begin{enumerate}
-\item I have achieved success on high-dimensional clustering problem using frequentist approaches.
-I will tackle the same problem in Bayesian perspective.
-\item Part of my thesis is using \textbf{conditional random field} for a fast single cell imputation.
+\item I have produced methodologies on high-dimensional clustering problem using frequentist approaches.
+I am very interested in high-dimensional or clustering problems from the Bayesian perspective.
+\item Part of my thesis is about methods for single cell data.
+I proposed a \textbf{conditional random field} model for fast single cell imputation
+and I'll continue explore that.
 
 \end{enumerate}
 
@@ -170,7 +176,7 @@ I will tackle the same problem in Bayesian perspective.
 
 \section{Bioinformatics application}
 As a biostatistician,
-an important job is to work with local biologists on their data.
+an important job and privilege is to work with local biologists and play with their own data.
 This is exciting for me not only I can help biologists towards innovating scientific findings,
 but also their data can motivate me to develop relevant statistical methodology.
 
@@ -181,19 +187,21 @@ I have been mainly involved in \textbf{cancer} and \textbf{psychiatry} diseases 
 For cancer research, I have worked on disease subtypes of breast cancer\cite{ref:ILC},
 DNA methylation of parity-induced mice\cite{ref:mouseParity}, 
 copy number variation of prostate cancer\cite{ref:prostate},
-fusion genes\cite{ref:fusionGene}.
+and fusion transcript discovery\cite{ref:fusionGene}.
 For psychiatry diseases,
 I have worked on schizophrenia, bipolar disorder and major depressive disorder in human pyramidal neurons\cite{ref:MO1} and parvalbumin neurons\cite{ref:PVL3}.
-Currently, I am working on other aspects of in psychiatry (e.g. Induced pluripotent stem cell, sex related depression effect and circadian pattern).
+Currently, I am also working on other aspects of in psychiatry (e.g. Induced pluripotent stem cell \cite{ref:iPSC}, sex related depression effect and circadian pattern).
 
 \item \textbf{Future direction:}
 \begin{enumerate}
-\item Collaboration is always important part for statistician/biostatistician.
-I will definitely seek for opportunities to work with local biologists, which will in turn motivate statistical methodology development.
+\item Collaboration is always an essential part for statistician/biostatistician.
+I will definitely seek for opportunities to work with local biologists in my future tenure-track research environment, 
+which will in turn motivate statistical methodology development.
 \item I have worked extensively on microarray data and sequencing data.
 But I understand that this is a fast moving field.
-I am ready for any newly developed data types, as technique advances.
-At this stage, I am exposed to single cell data (single cell methylation and single cell gene expression) as part of my thesis.
+I am ready to learn newly developed data types, as technique advances.
+At this stage, I am exposed to single cell data (single cell methylation and expression),
+which is as part of my thesis.
 \end{enumerate}
 \end{itemize}
 
@@ -254,6 +262,11 @@ Oesterreich, S., Katz, T.A., Logan, G., Levine, K., Nagle, A., {\bf Huo, Z.}, Ts
 John Enwright,  Dominique Arion, {\bf Zhiguang Huo}, George Tseng and David A. Lewis. 
 Transcriptome alterations in layer 3 parvalbumin neurons in the dorsolateral prefrontal cortex in schizophrenia differ from those in layer 3 pyramidal cells.
 (in preparation).
+
+\bibitem{ref:iPSC} 
+ Logan, R.W., Ozburn, A.R., {\bf Huo, Z.}, Zhu, X., Fitzgerald, E., Arey, R.N., Jarpe, M., Tseng, G. and McClung, C.A. (2017)
+Valproic acid targets HDAC2 to normalize mania-like behaviors in mice. In preparation.
+
 
 
 
